@@ -11,4 +11,13 @@ public class WiseSaying {
         this.content=content;
         this.author=author;
     }
+
+    @Override
+    public String toString() {
+        return "WiseSaying{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
 }
