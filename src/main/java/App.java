@@ -2,15 +2,18 @@ import java.util.Scanner;
 
 public class App {
     private Scanner sc;
+    int wiseSayingLastId;
 
-    public App(){
+    public App() {
         sc = new Scanner(System.in);
+        wiseSayingLastId = 0;
     }
-    void run(){
+
+    void run() {
 
         System.out.println("---명언 SSG---");
         outer:
-        while(true){
+        while (true) {
             System.out.print("명령)");
             String cmd = sc.nextLine();
 
@@ -26,14 +29,14 @@ public class App {
         sc.close();
     }
 
-    void write(){
-        int id = 1;
+    void write() {
+        int id = ++wiseSayingLastId;
         System.out.printf("명언 : ");
         String content = sc.nextLine();
 
         System.out.printf("작가 : ");
         String author = sc.nextLine();
 
-        System.out.printf("%d번 명언이 등록 되었습니다.",id);
+        System.out.printf("%d번 명언이 등록 되었습니다.\n", id);
     }
 }
