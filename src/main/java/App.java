@@ -1,12 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
     private Scanner sc;
     int wiseSayingLastId;
+    private List<WiseSaying> wiseSayings;
 
     public App() {
         sc = new Scanner(System.in);
         wiseSayingLastId = 0;
+        wiseSayings = new ArrayList<>();
     }
 
     void run() {
@@ -42,7 +46,7 @@ public class App {
         String author = sc.nextLine();
 
         WiseSaying wiseSaying = new WiseSaying(id,content,author);
-        System.out.println(wiseSaying);
+        wiseSayings.add(wiseSaying);
         System.out.printf("%d번 명언이 등록 되었습니다.\n", id);
     }
 }
