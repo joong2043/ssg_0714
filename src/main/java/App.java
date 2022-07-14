@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class App {
     private Scanner sc;
@@ -27,6 +28,8 @@ public class App {
                     break;
 
                 case "목록":
+                    list();
+                    break;
 
                 case "삭제":
 
@@ -48,5 +51,12 @@ public class App {
         WiseSaying wiseSaying = new WiseSaying(id,content,author);
         wiseSayings.add(wiseSaying);
         System.out.printf("%d번 명언이 등록 되었습니다.\n", id);
+    }
+
+    void list(){
+        System.out.println("번호 / 작가 / 명언");
+        System.out.println("===================");
+        Stream<WiseSaying> wiseSayingList = wiseSayings.stream();
+        wiseSayingList.forEach(s-> System.out.println(s));
     }
 }

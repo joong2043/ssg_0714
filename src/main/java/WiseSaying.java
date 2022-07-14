@@ -3,21 +3,18 @@ public class WiseSaying {
     String content;
     String author;
 
-    WiseSaying(){
+    WiseSaying() {
 
     }
-    WiseSaying(int id, String content, String author){
-        this.id=id;
-        this.content=content;
-        this.author=author;
+
+    WiseSaying(int id, String content, String author) {
+        this.id = id;
+        this.content = content;
+        this.author = author;
     }
 
     @Override
     public String toString() {
-        return "WiseSaying{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+        return id + " / " + content + " / " + author;
     }
 }
