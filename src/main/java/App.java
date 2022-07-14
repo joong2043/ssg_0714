@@ -22,6 +22,10 @@ public class App {
                     write();
                     break;
 
+                case "목록":
+
+                case "삭제":
+
                 case "종료":
                     break outer;
             }
@@ -37,6 +41,7 @@ public class App {
         System.out.printf("작가 : ");
         String author = sc.nextLine();
 
+        WiseSaying wiseSaying = new WiseSaying(id,content,author);
         System.out.printf("%d번 명언이 등록 되었습니다.\n", id);
     }
 }
